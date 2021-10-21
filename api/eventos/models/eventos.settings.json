@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evento",
+  "info": {
+    "name": "Evento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "default": "Nome do Evento",
+      "required": true,
+      "minLength": 10
+    },
+    "Data": {
+      "type": "datetime",
+      "required": true
+    },
+    "Descricao": {
+      "type": "richtext",
+      "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,",
+      "required": true
+    },
+    "Ingresso": {
+      "type": "string",
+      "default": "Link de compra de ingressos do seu evento"
+    },
+    "Capa": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "categorias": {
+      "via": "tag",
+      "collection": "categoria"
+    }
+  }
+}

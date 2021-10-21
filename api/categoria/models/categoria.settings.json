@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "name": "Categoria",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag": {
+      "collection": "eventos",
+      "via": "categorias",
+      "dominant": true
+    },
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "minLength": 6,
+      "default": "Nome da categoria"
+    },
+    "Descricao": {
+      "type": "richtext",
+      "default": "Descrição da sua categoria",
+      "required": false
+    }
+  }
+}
