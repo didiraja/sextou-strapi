@@ -523,7 +523,42 @@
           "id": {
             "type": "string"
           },
-          "tag": {
+          "Titulo": {
+            "type": "string",
+            "default": "Nome da categoria",
+            "minLength": 6
+          },
+          "Descricao": {
+            "type": "string",
+            "default": "Descrição da sua categoria"
+          },
+          "bairros": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Nome"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "regiao": {
+                  "type": "string"
+                },
+                "Nome": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "eventos": {
             "type": "array",
             "items": {
               "required": [
@@ -552,11 +587,11 @@
                 "Capa": {
                   "type": "string"
                 },
-                "categorias": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "regiao": {
+                  "type": "string"
+                },
+                "Bairro": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -569,15 +604,6 @@
                 }
               }
             }
-          },
-          "Titulo": {
-            "type": "string",
-            "default": "Nome da categoria",
-            "minLength": 6
-          },
-          "Descricao": {
-            "type": "string",
-            "default": "Descrição da sua categoria"
           }
         }
       },
@@ -586,12 +612,6 @@
           "Titulo"
         ],
         "properties": {
-          "tag": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "Titulo": {
             "type": "string",
             "default": "Nome da categoria",
@@ -600,6 +620,18 @@
           "Descricao": {
             "type": "string",
             "default": "Descrição da sua categoria"
+          },
+          "bairros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "eventos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

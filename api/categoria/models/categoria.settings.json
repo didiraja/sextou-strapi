@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "categorias",
   "info": {
-    "name": "Categoria",
+    "name": "Região",
     "description": ""
   },
   "options": {
@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tag": {
-      "collection": "eventos",
-      "via": "categorias",
-      "dominant": true
-    },
     "Titulo": {
       "type": "string",
       "required": true,
@@ -27,6 +22,14 @@
       "type": "richtext",
       "default": "Descrição da sua categoria",
       "required": false
+    },
+    "bairros": {
+      "via": "regiao",
+      "collection": "bairro"
+    },
+    "eventos": {
+      "via": "regiao",
+      "collection": "eventos"
     }
   }
 }

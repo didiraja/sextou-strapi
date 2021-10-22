@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/eventos": {
+    "/bairros": {
       "get": {
         "deprecated": false,
-        "description": "Find all the eventos's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Eventos"
+                    "$ref": "#/components/schemas/Bairro"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new eventos record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Bairro"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEventos"
+                "$ref": "#/components/schemas/NewBairro"
               }
             }
           }
         }
       }
     },
-    "/eventos/count": {
+    "/bairros/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of eventos documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "parameters": []
       }
     },
-    "/eventos/{id}": {
+    "/bairros/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one eventos record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Bairro"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single eventos record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Bairro"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEventos"
+                "$ref": "#/components/schemas/NewBairro"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single eventos record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single eventos based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Bairro"
         ],
         "parameters": [
           {
@@ -514,101 +514,14 @@
   },
   "components": {
     "schemas": {
-      "Eventos": {
+      "Bairro": {
         "required": [
           "id",
-          "Titulo",
-          "Data",
-          "Descricao",
-          "Capa"
+          "Nome"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "Titulo": {
-            "type": "string",
-            "default": "Nome do Evento",
-            "minLength": 10
-          },
-          "Data": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Descricao": {
-            "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
-          },
-          "Ingresso": {
-            "type": "string",
-            "default": "Link de compra de ingressos do seu evento"
-          },
-          "Capa": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "regiao": {
             "required": [
@@ -645,68 +558,23 @@
               }
             }
           },
-          "Bairro": {
-            "required": [
-              "id",
-              "Nome"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "regiao": {
-                "type": "string"
-              },
-              "Nome": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "published_at": {
+          "Nome": {
             "type": "string",
-            "format": "date-time"
+            "minLength": 2
           }
         }
       },
-      "NewEventos": {
+      "NewBairro": {
         "required": [
-          "Titulo",
-          "Data",
-          "Descricao"
+          "Nome"
         ],
         "properties": {
-          "Titulo": {
-            "type": "string",
-            "default": "Nome do Evento",
-            "minLength": 10
-          },
-          "Data": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Descricao": {
-            "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
-          },
-          "Ingresso": {
-            "type": "string",
-            "default": "Link de compra de ingressos do seu evento"
-          },
           "regiao": {
             "type": "string"
           },
-          "Bairro": {
-            "type": "string"
-          },
-          "published_at": {
+          "Nome": {
             "type": "string",
-            "format": "date-time"
+            "minLength": 2
           },
           "created_by": {
             "type": "string"
@@ -720,7 +588,7 @@
   },
   "tags": [
     {
-      "name": "Eventos"
+      "name": "Bairro"
     }
   ]
 }

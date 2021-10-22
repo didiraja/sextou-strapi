@@ -41,9 +41,12 @@
       "required": true,
       "pluginOptions": {}
     },
-    "categorias": {
-      "via": "tag",
-      "collection": "categoria"
+    "regiao": {
+      "model": "categoria",
+      "via": "eventos"
+    },
+    "Bairro": {
+      "model": "bairro"
     }
   }
 }
