@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "Zones",
   "info": {
-    "name": "Região",
+    "name": "Zone",
     "description": ""
   },
   "options": {
@@ -12,24 +12,24 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titulo": {
+    "Title": {
       "type": "string",
       "required": true,
       "minLength": 6,
       "default": "Nome da categoria"
     },
-    "Descricao": {
+    "Description": {
       "type": "richtext",
       "default": "Descrição da sua categoria",
       "required": false
     },
-    "bairros": {
-      "via": "regiao",
-      "collection": "bairro"
+    "Events": {
+      "via": "Zone",
+      "collection": "events"
     },
-    "eventos": {
-      "via": "regiao",
-      "collection": "eventos"
+    "Neighbors": {
+      "via": "Zone",
+      "collection": "neighbor"
     }
   }
 }

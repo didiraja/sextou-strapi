@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categorias": {
+    "/zones": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Categoria"
+                    "$ref": "#/components/schemas/Zone"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/Zone"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategoria"
+                "$ref": "#/components/schemas/NewZone"
               }
             }
           }
         }
       }
     },
-    "/categorias/count": {
+    "/zones/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "parameters": []
       }
     },
-    "/categorias/{id}": {
+    "/zones/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/Zone"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/Zone"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategoria"
+                "$ref": "#/components/schemas/NewZone"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Categoria"
+          "Zone"
         ],
         "parameters": [
           {
@@ -514,83 +514,57 @@
   },
   "components": {
     "schemas": {
-      "Categoria": {
+      "Zone": {
         "required": [
           "id",
-          "Titulo"
+          "Title"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Titulo": {
+          "Title": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6
           },
-          "Descricao": {
+          "Description": {
             "type": "string",
             "default": "Descrição da sua categoria"
           },
-          "bairros": {
+          "Events": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "Nome"
+                "Title",
+                "Date",
+                "Description",
+                "Cover"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "regiao": {
+                "Title": {
                   "type": "string"
                 },
-                "Nome": {
+                "Date": {
                   "type": "string"
                 },
-                "created_by": {
+                "Description": {
                   "type": "string"
                 },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "eventos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "Titulo",
-                "Data",
-                "Descricao",
-                "Capa"
-              ],
-              "properties": {
-                "id": {
+                "Ticket": {
                   "type": "string"
                 },
-                "Titulo": {
+                "Cover": {
                   "type": "string"
                 },
-                "Data": {
+                "Zone": {
                   "type": "string"
                 },
-                "Descricao": {
-                  "type": "string"
-                },
-                "Ingresso": {
-                  "type": "string"
-                },
-                "Capa": {
-                  "type": "string"
-                },
-                "regiao": {
-                  "type": "string"
-                },
-                "Bairro": {
+                "Neighbor": {
                   "type": "string"
                 },
                 "published_at": {
@@ -604,30 +578,56 @@
                 }
               }
             }
+          },
+          "Neighbors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Zone": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
-      "NewCategoria": {
+      "NewZone": {
         "required": [
-          "Titulo"
+          "Title"
         ],
         "properties": {
-          "Titulo": {
+          "Title": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6
           },
-          "Descricao": {
+          "Description": {
             "type": "string",
             "default": "Descrição da sua categoria"
           },
-          "bairros": {
+          "Events": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "eventos": {
+          "Neighbors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -645,7 +645,7 @@
   },
   "tags": [
     {
-      "name": "Categoria"
+      "name": "Zone"
     }
   ]
 }

@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/bairros",
-      "handler": "bairro.find",
+      "path": "/zones",
+      "handler": "zone.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/bairros/count",
-      "handler": "bairro.count",
+      "path": "/zones/count",
+      "handler": "zone.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/bairros/:id",
-      "handler": "bairro.findOne",
+      "path": "/zones/:id",
+      "handler": "zone.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/bairros",
-      "handler": "bairro.create",
+      "path": "/zones",
+      "handler": "zone.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/bairros/:id",
-      "handler": "bairro.update",
+      "path": "/zones/:id",
+      "handler": "zone.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/bairros/:id",
-      "handler": "bairro.delete",
+      "path": "/zones/:id",
+      "handler": "zone.delete",
       "config": {
         "policies": []
       }

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "bairros",
+  "collectionName": "NeighborhoodsCollection",
   "info": {
-    "name": "Bairro",
+    "name": "Neighbor",
     "description": ""
   },
   "options": {
@@ -12,11 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "regiao": {
-      "model": "categoria",
-      "via": "bairros"
+    "Zone": {
+      "via": "Neighbors",
+      "model": "zone"
     },
-    "Nome": {
+    "Name": {
       "type": "string",
       "required": true,
       "minLength": 2

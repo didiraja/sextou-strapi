@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "evento",
+  "collectionName": "EventsCollection",
   "info": {
-    "name": "Evento",
+    "name": "Event",
     "description": ""
   },
   "options": {
@@ -12,26 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titulo": {
+    "Title": {
       "type": "string",
       "default": "Nome do Evento",
       "required": true,
       "minLength": 10
     },
-    "Data": {
+    "Date": {
       "type": "datetime",
       "required": true
     },
-    "Descricao": {
+    "Description": {
       "type": "richtext",
       "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,",
       "required": true
     },
-    "Ingresso": {
+    "Ticket": {
       "type": "string",
       "default": "Link de compra de ingressos do seu evento"
     },
-    "Capa": {
+    "Cover": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -41,12 +41,12 @@
       "required": true,
       "pluginOptions": {}
     },
-    "regiao": {
-      "model": "categoria",
-      "via": "eventos"
+    "Zone": {
+      "via": "Events",
+      "model": "zone"
     },
-    "Bairro": {
-      "model": "bairro"
+    "Neighbor": {
+      "model": "neighbor"
     }
   }
 }
