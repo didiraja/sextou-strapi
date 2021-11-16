@@ -11,6 +11,7 @@ Icon
 ._*
 
 
+
 ############################
 # Linux
 ############################
@@ -112,3 +113,9 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+############################
+# Custom
+############################
+# private/backups/\*
+# !private/backups/.gitkeep
