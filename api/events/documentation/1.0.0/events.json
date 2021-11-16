@@ -631,7 +631,7 @@
                   "type": "string"
                 }
               },
-              "Neighbors": {
+              "Neighborhood": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -645,7 +645,7 @@
               }
             }
           },
-          "Neighbor": {
+          "Neighborhood": {
             "required": [
               "id",
               "Name"
@@ -701,7 +701,7 @@
           "Zone": {
             "type": "string"
           },
-          "Neighbor": {
+          "Neighborhood": {
             "type": "string"
           },
           "published_at": {

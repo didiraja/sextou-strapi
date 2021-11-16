@@ -45,8 +45,8 @@
       "via": "Events",
       "model": "zone"
     },
-    "Neighbor": {
-      "model": "neighbor"
+    "Neighborhood": {
+      "model": "neighborhood"
     }
   }
 }

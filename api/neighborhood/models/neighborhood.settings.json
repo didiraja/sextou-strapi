@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "NeighborhoodsCollection",
   "info": {
-    "name": "Neighbor",
+    "name": "Neighborhood",
     "description": ""
   },
   "options": {
@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "Zone": {
-      "via": "Neighbors",
+      "via": "Neighborhood",
       "model": "zone"
     },
     "Name": {

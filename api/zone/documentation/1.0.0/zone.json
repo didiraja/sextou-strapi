@@ -564,7 +564,7 @@
                 "Zone": {
                   "type": "string"
                 },
-                "Neighbor": {
+                "Neighborhood": {
                   "type": "string"
                 },
                 "published_at": {
@@ -579,7 +579,7 @@
               }
             }
           },
-          "Neighbors": {
+          "Neighborhood": {
             "type": "array",
             "items": {
               "required": [
@@ -627,7 +627,7 @@
               "type": "string"
             }
           },
-          "Neighbors": {
+          "Neighborhood": {
             "type": "array",
             "items": {
               "type": "string"

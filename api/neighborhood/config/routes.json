@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/neighbor",
-      "handler": "neighbor.find",
+      "path": "/neighborhood",
+      "handler": "neighborhood.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/neighbor/count",
-      "handler": "neighbor.count",
+      "path": "/neighborhood/count",
+      "handler": "neighborhood.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/neighbor/:id",
-      "handler": "neighbor.findOne",
+      "path": "/neighborhood/:id",
+      "handler": "neighborhood.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/neighbor",
-      "handler": "neighbor.create",
+      "path": "/neighborhood",
+      "handler": "neighborhood.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/neighbor/:id",
-      "handler": "neighbor.update",
+      "path": "/neighborhood/:id",
+      "handler": "neighborhood.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/neighbor/:id",
-      "handler": "neighbor.delete",
+      "path": "/neighborhood/:id",
+      "handler": "neighborhood.delete",
       "config": {
         "policies": []
       }

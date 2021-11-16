@@ -27,9 +27,9 @@
       "via": "Zone",
       "collection": "events"
     },
-    "Neighbors": {
+    "Neighborhood": {
       "via": "Zone",
-      "collection": "neighbor"
+      "collection": "neighborhood"
     }
   }
 }

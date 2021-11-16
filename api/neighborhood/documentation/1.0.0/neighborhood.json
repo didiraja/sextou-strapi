@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/neighbor": {
+    "/neighborhood": {
       "get": {
         "deprecated": false,
-        "description": "Find all the neighbor's records",
+        "description": "Find all the neighborhood's records",
         "responses": {
           "200": {
-            "description": "Retrieve neighbor document(s)",
+            "description": "Retrieve neighborhood document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Neighbor"
+                    "$ref": "#/components/schemas/Neighborhood"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new neighbor record",
+        "description": "Create a new neighborhood record",
         "responses": {
           "200": {
-            "description": "Retrieve neighbor document(s)",
+            "description": "Retrieve neighborhood document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Neighbor"
+                  "$ref": "#/components/schemas/Neighborhood"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNeighbor"
+                "$ref": "#/components/schemas/NewNeighborhood"
               }
             }
           }
         }
       }
     },
-    "/neighbor/count": {
+    "/neighborhood/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of neighbor documents",
+        "description": "Retrieve the number of neighborhood documents",
         "responses": {
           "200": {
-            "description": "Retrieve neighbor document(s)",
+            "description": "Retrieve neighborhood document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "parameters": []
       }
     },
-    "/neighbor/{id}": {
+    "/neighborhood/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one neighbor record",
+        "description": "Find one neighborhood record",
         "responses": {
           "200": {
-            "description": "Retrieve neighbor document(s)",
+            "description": "Retrieve neighborhood document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Neighbor"
+                  "$ref": "#/components/schemas/Neighborhood"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single neighbor record",
+        "description": "Update a single neighborhood record",
         "responses": {
           "200": {
-            "description": "Retrieve neighbor document(s)",
+            "description": "Retrieve neighborhood document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Neighbor"
+                  "$ref": "#/components/schemas/Neighborhood"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNeighbor"
+                "$ref": "#/components/schemas/NewNeighborhood"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single neighbor record",
+        "description": "Delete a single neighborhood record",
         "responses": {
           "200": {
-            "description": "deletes a single neighbor based on the ID supplied",
+            "description": "deletes a single neighborhood based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Neighbor"
+          "Neighborhood"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Neighbor": {
+      "Neighborhood": {
         "required": [
           "id",
           "Name"
@@ -544,7 +544,7 @@
                   "type": "string"
                 }
               },
-              "Neighbors": {
+              "Neighborhood": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -564,7 +564,7 @@
           }
         }
       },
-      "NewNeighbor": {
+      "NewNeighborhood": {
         "required": [
           "Name"
         ],
@@ -588,7 +588,7 @@
   },
   "tags": [
     {
-      "name": "Neighbor"
+      "name": "Neighborhood"
     }
   ]
 }
