@@ -567,6 +567,9 @@
                 "Neighborhood": {
                   "type": "string"
                 },
+                "Highlight": {
+                  "type": "boolean"
+                },
                 "published_at": {
                   "type": "string"
                 },

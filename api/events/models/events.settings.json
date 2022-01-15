@@ -47,6 +47,11 @@
     },
     "Neighborhood": {
       "model": "neighborhood"
+    },
+    "Highlight": {
+      "type": "boolean",
+      "default": false,
+      "unique": true
     }
   }
 }
