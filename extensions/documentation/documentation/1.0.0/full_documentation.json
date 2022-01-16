@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/16/2022 1:16:28 AM"
+    "x-generation-date": "01/16/2022 4:50:22 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3830,7 +3830,7 @@
           },
           "Description": {
             "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
+            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text."
           },
           "Ticket": {
             "type": "string",
@@ -3989,7 +3989,7 @@
           },
           "Description": {
             "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
+            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text."
           },
           "Ticket": {
             "type": "string",

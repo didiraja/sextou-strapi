@@ -537,7 +537,7 @@
           },
           "Description": {
             "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
+            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text."
           },
           "Ticket": {
             "type": "string",
@@ -696,7 +696,7 @@
           },
           "Description": {
             "type": "string",
-            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,"
+            "default": "Digite aqui a descrição do seu evento. Aceita Rich Text."
           },
           "Ticket": {
             "type": "string",

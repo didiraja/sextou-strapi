@@ -24,7 +24,7 @@
     },
     "Description": {
       "type": "richtext",
-      "default": "Digite aqui a descrição do seu evento. Aceita Rich Text,",
+      "default": "Digite aqui a descrição do seu evento. Aceita Rich Text.",
       "required": true
     },
     "Ticket": {
@@ -51,7 +51,7 @@
     "Highlight": {
       "type": "boolean",
       "default": false,
-      "unique": true
+      "unique": false
     }
   }
 }
