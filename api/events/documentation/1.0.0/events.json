@@ -613,13 +613,13 @@
           "Zone": {
             "required": [
               "id",
-              "Title"
+              "Name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Title": {
+              "Name": {
                 "type": "string"
               },
               "Description": {

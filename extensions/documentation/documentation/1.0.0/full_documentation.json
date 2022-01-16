@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/09/2022 8:31:19 PM"
+    "x-generation-date": "01/16/2022 1:16:28 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3906,13 +3906,13 @@
           "Zone": {
             "required": [
               "id",
-              "Title"
+              "Name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Title": {
+              "Name": {
                 "type": "string"
               },
               "Description": {
@@ -4029,13 +4029,13 @@
           "Zone": {
             "required": [
               "id",
-              "Title"
+              "Name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Title": {
+              "Name": {
                 "type": "string"
               },
               "Description": {
@@ -4090,13 +4090,13 @@
       "Zone": {
         "required": [
           "id",
-          "Title"
+          "Name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Title": {
+          "Name": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6
@@ -4185,10 +4185,10 @@
       },
       "NewZone": {
         "required": [
-          "Title"
+          "Name"
         ],
         "properties": {
-          "Title": {
+          "Name": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6

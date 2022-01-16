@@ -517,13 +517,13 @@
       "Zone": {
         "required": [
           "id",
-          "Title"
+          "Name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Title": {
+          "Name": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6
@@ -612,10 +612,10 @@
       },
       "NewZone": {
         "required": [
-          "Title"
+          "Name"
         ],
         "properties": {
-          "Title": {
+          "Name": {
             "type": "string",
             "default": "Nome da categoria",
             "minLength": 6
