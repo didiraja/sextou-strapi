@@ -24,6 +24,12 @@
       "relation": "manyToOne",
       "target": "api::zone.zone",
       "inversedBy": "Districts"
+    },
+    "Event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "District"
     }
   }
 }

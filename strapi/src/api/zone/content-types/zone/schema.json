@@ -12,13 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "private": true,
-      "inversedBy": "zones"
-    },
     "Title": {
       "type": "string",
       "default": "Zone Title",
@@ -42,6 +35,12 @@
       "relation": "oneToMany",
       "target": "api::district.district",
       "mappedBy": "Zone"
+    },
+    "Event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "Zones"
     }
   }
 }

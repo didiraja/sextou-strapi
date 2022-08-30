@@ -23,6 +23,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::event.event"
+    },
+    "Event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "Music"
     }
   }
 }

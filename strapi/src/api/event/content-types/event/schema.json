@@ -30,11 +30,27 @@
       "default": "event title",
       "required": true
     },
-    "zones": {
+    "Zones": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::zone.zone",
-      "mappedBy": "event"
+      "mappedBy": "Event"
+    },
+    "District": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::district.district",
+      "mappedBy": "Event"
+    },
+    "Music": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::music.music",
+      "mappedBy": "Event"
+    },
+    "Date": {
+      "type": "datetime",
+      "required": true
     }
   }
 }
