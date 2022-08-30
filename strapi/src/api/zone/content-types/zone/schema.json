@@ -24,7 +24,7 @@
       "default": "Zone Title",
       "required": true,
       "maxLength": 80,
-      "minLength": 10
+      "minLength": 6
     },
     "Cover": {
       "type": "media",
