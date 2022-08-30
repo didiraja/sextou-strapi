@@ -4,35 +4,25 @@
   "info": {
     "singularName": "music",
     "pluralName": "musics",
-    "displayName": "Music",
-    "description": ""
+    "displayName": "Music"
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "Fields": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "main.taxonomy-entries",
-      "required": true,
-      "min": 3
+    "Title": {
+      "type": "string",
+      "maxLength": 20,
+      "required": true
     },
-    "events": {
+    "Description": {
+      "type": "richtext"
+    },
+    "Events": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::event.event",
-      "mappedBy": "music"
+      "target": "api::event.event"
     }
   }
 }

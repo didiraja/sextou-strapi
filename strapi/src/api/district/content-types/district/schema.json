@@ -4,31 +4,26 @@
   "info": {
     "singularName": "district",
     "pluralName": "districts",
-    "displayName": "Districts",
-    "description": ""
+    "displayName": "Districts"
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "Fields": {
-      "type": "component",
-      "repeatable": false,
-      "component": "main.taxonomy-entries",
+    "Title": {
+      "type": "string",
+      "maxLength": 80,
       "required": true
     },
-    "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "inversedBy": "districts"
+    "Description": {
+      "type": "richtext"
     },
-    "zone": {
+    "Zone": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::zone.zone",
-      "inversedBy": "districts"
+      "inversedBy": "Districts"
     }
   }
 }

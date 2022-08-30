@@ -19,7 +19,7 @@
     "Cover": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -35,18 +35,6 @@
       "relation": "oneToMany",
       "target": "api::zone.zone",
       "mappedBy": "event"
-    },
-    "districts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::district.district",
-      "mappedBy": "event"
-    },
-    "music": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::music.music",
-      "inversedBy": "events"
     }
   }
 }
