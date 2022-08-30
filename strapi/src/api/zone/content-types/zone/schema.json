@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zones",
+  "info": {
+    "singularName": "zone",
+    "pluralName": "zones",
+    "displayName": "Zones",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main.taxonomy-entries",
+      "required": true
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "private": true,
+      "inversedBy": "zones"
+    },
+    "districts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::district.district",
+      "mappedBy": "zone"
+    }
+  }
+}

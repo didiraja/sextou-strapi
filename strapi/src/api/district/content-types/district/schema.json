@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "districts",
+  "info": {
+    "singularName": "district",
+    "pluralName": "districts",
+    "displayName": "Districts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main.taxonomy-entries",
+      "required": true
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "districts"
+    },
+    "zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zone.zone",
+      "inversedBy": "districts"
+    }
+  }
+}

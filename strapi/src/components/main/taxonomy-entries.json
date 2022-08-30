@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_main_taxonomy_entries",
+  "info": {
+    "displayName": "Taxonomy Entries",
+    "icon": "list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 50,
+      "default": "Title",
+      "required": true
+    },
+    "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Description": {
+      "type": "richtext",
+      "default": "Description"
+    }
+  }
+}

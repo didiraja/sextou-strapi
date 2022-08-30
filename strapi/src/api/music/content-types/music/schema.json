@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musics",
+  "info": {
+    "singularName": "music",
+    "pluralName": "musics",
+    "displayName": "Music",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Fields": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "main.taxonomy-entries",
+      "required": true,
+      "min": 3
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "music"
+    }
+  }
+}

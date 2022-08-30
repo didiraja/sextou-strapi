@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "richtext",
+      "required": false
+    },
+    "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Title": {
+      "type": "text",
+      "maxLength": 50,
+      "default": "event title",
+      "required": true
+    },
+    "zones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zone.zone",
+      "mappedBy": "event"
+    },
+    "districts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::district.district",
+      "mappedBy": "event"
+    },
+    "music": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::music.music",
+      "inversedBy": "events"
+    }
+  }
+}
