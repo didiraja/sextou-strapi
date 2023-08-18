@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Título do Evento",
+      "required": true,
+      "minLength": 5
+    },
+    "Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Tickets": {
+      "type": "string",
+      "minLength": 10
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
