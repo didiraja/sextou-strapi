@@ -75,15 +75,8 @@
     },
     "meus_amigos": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "todo_samigos"
-    },
-    "todo_samigos": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "meus_amigos"
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
