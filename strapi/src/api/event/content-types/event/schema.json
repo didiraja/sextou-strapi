@@ -1,10 +1,11 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "events",
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,15 +27,30 @@
       "minLength": 10
     },
     "Cover": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "Description": {
       "type": "richtext"
+    },
+    "Bairro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::district.district"
+    },
+    "Regiao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "Musica": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::music.music"
     }
   }
 }

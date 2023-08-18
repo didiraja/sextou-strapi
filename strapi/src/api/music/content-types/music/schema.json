@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musics",
+  "info": {
+    "singularName": "music",
+    "pluralName": "musics",
+    "displayName": "Music"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 20
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
