@@ -77,6 +77,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user"
+    },
+    "attendings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::attendance.attendance",
+      "inversedBy": "social_users"
     }
   }
 }

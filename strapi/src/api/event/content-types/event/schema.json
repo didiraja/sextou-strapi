@@ -47,6 +47,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::music.music"
+    },
+    "attendees": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::attendance.attendance",
+      "inversedBy": "events"
     }
   }
 }
