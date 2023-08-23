@@ -37,15 +37,11 @@
     "Description": {
       "type": "richtext"
     },
-    "Bairro": {
+    "regioes": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::district.district"
-    },
-    "Regiao": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::region.region"
+      "relation": "oneToMany",
+      "target": "api::region.region",
+      "mappedBy": "events"
     },
     "Musica": {
       "type": "relation",

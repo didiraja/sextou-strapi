@@ -4,7 +4,8 @@
   "info": {
     "singularName": "region",
     "pluralName": "regions",
-    "displayName": "Region"
+    "displayName": "Region",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,7 +18,25 @@
       "maxLength": 20
     },
     "Description": {
-      "type": "richtext"
+      "type": "string"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::region.region",
+      "inversedBy": "parent"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::region.region",
+      "inversedBy": "child"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "regioes"
     }
   }
 }
